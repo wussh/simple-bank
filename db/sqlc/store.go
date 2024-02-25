@@ -26,6 +26,7 @@ func (store *Store) execTx(ctx context.Context, fn func(*Queries) error) error {
 	if err != nil {
 		return err
 	}
+
 	q := New(tx)
 	err = fn(q)
 	if err != nil {
@@ -34,6 +35,7 @@ func (store *Store) execTx(ctx context.Context, fn func(*Queries) error) error {
 		}
 		return err
 	}
+
 	return tx.Commit()
 }
 
@@ -57,8 +59,10 @@ type TransferTxResult struct {
 // It creates the transfer, add account entries, and update accounts' balance within a database transaction
 func (store *Store) TransferTx(ctx context.Context, arg TransferTxParams) (TransferTxResult, error) {
 	var result TransferTxResult
+
 	err := store.execTx(ctx, func(q *Queries) error {
 		var err error
+
 		result.Transfer, err = q.CreateTransfer(ctx, CreateTransferParams{
 			FromAccountID: arg.FromAccountID,
 			ToAccountID:   arg.ToAccountID,
@@ -67,6 +71,7 @@ func (store *Store) TransferTx(ctx context.Context, arg TransferTxParams) (Trans
 		if err != nil {
 			return err
 		}
+
 		result.FromEntry, err = q.CreateEntry(ctx, CreateEntryParams{
 			AccountID: arg.FromAccountID,
 			Amount:    -arg.Amount,
@@ -74,6 +79,7 @@ func (store *Store) TransferTx(ctx context.Context, arg TransferTxParams) (Trans
 		if err != nil {
 			return err
 		}
+
 		result.ToEntry, err = q.CreateEntry(ctx, CreateEntryParams{
 			AccountID: arg.ToAccountID,
 			Amount:    arg.Amount,
