@@ -1,12 +1,12 @@
 module github.com/wussh/simple-bank
 
-go 1.21.6
+go 1.24
 
 require (
 	github.com/gin-gonic/gin v1.7.7
 	github.com/lib/pq v1.10.9
 	github.com/stretchr/testify v1.8.4
-	github.com/techschool/simplebank v0.0.0-20240203105811-3a4535f624aa
+	github.com/techschool/simplebank v0.0.0-20250420075428-97f000fe58ad
 )
 
 require (

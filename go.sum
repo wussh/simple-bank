@@ -213,6 +213,8 @@ github.com/subosito/gotenv v1.2.0 h1:Slr1R9HxAlEKefgq5jn9U+DnETlIUa6HfgEzj0g5d7s
 github.com/subosito/gotenv v1.2.0/go.mod h1:N0PQaV/YGNqwC0u51sEeR/aUtSLEXKX9iv69rRypqCw=
 github.com/techschool/simplebank v0.0.0-20240203105811-3a4535f624aa h1:tORvplZwyxiIdWLIb29qtMLijMcFjEfrcIZT3TtisHs=
 github.com/techschool/simplebank v0.0.0-20240203105811-3a4535f624aa/go.mod h1:y6nH7U3EyXBjs+mLlEWt4ZOMNptF3AdQoPSBsGgjm94=
+github.com/techschool/simplebank v0.0.0-20250420075428-97f000fe58ad h1:YLNK4SsL0JdY9sr45OdWXyXCjgLm/l60FgWUju6A2lc=
+github.com/techschool/simplebank v0.0.0-20250420075428-97f000fe58ad/go.mod h1:aDC2BdBLCOe7KV1nPEuDTKHLHBXwvLrGyln154NRPF0=
 github.com/ugorji/go v1.1.7/go.mod h1:kZn38zHttfInRq0xu/PH0az30d+z6vm202qpg1oXVMw=
 github.com/ugorji/go v1.2.7/go.mod h1:nF9osbDWLy6bDVv/Rtoh6QgnvNDpmCalQV5urGCCS6M=
 github.com/ugorji/go/codec v1.1.7/go.mod h1:Ax+UKWsSmolVDwsd+7N3ZtXu+yMGCf907BLYF3GoBXY=
