@@ -4,7 +4,7 @@ go 1.21.6
 
 require (
 	github.com/gin-gonic/gin v1.7.7
-	github.com/lib/pq v1.10.9
+	github.com/lib/pq v1.12.3
 	github.com/stretchr/testify v1.8.4
 	github.com/techschool/simplebank v0.0.0-20240203105811-3a4535f624aa
 )
